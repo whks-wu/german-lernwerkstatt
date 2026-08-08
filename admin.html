@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>题库管理后台 · 跑鹅德语</title>
+<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/admin.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img class="brand-logo" src="images/logo-studio.png" alt="跑鹅德语" />
+      <div>
+        <h1>题库管理后台</h1>
+        <p class="subtitle">编辑完成后导出 data.js，替换项目里的同名文件即可生效</p>
+      </div>
+    </div>
+    <a class="btn-secondary back-link" href="index.html">← 返回练习页面</a>
+  </header>
+
+  <main class="admin-main">
+    <div id="admin-status" class="admin-status"></div>
+
+    <nav class="tabs" role="tablist" aria-label="题型选择">
+      <button class="tab-btn is-active" data-tab="drag" role="tab" aria-selected="true">选词填空</button>
+      <button class="tab-btn" data-tab="match" role="tab" aria-selected="false">连线题</button>
+      <button class="tab-btn" data-tab="type" role="tab" aria-selected="false">打字填空</button>
+    </nav>
+
+    <section id="admin-panel-drag" class="admin-panel is-active">
+      <div id="admin-drag-lessons"></div>
+      <div class="admin-add-row">
+        <button class="btn-primary" id="add-drag-sentence-lesson">+ 新建句子填空练习</button>
+        <button class="btn-primary" id="add-drag-image-lesson">+ 新建图片配对练习</button>
+      </div>
+    </section>
+
+    <section id="admin-panel-match" class="admin-panel">
+      <div id="admin-match-lessons"></div>
+      <div class="admin-add-row">
+        <button class="btn-primary" id="add-match-lesson">+ 新建连线练习</button>
+      </div>
+    </section>
+
+    <section id="admin-panel-type" class="admin-panel">
+      <div id="admin-type-lessons"></div>
+      <div class="admin-add-row">
+        <button class="btn-primary" id="add-type-lesson">+ 新建打字填空练习</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="admin-footer">
+    <button class="btn-secondary" id="reset-btn">放弃修改，重新从 data.js 加载</button>
+    <button class="btn-primary" id="export-btn">导出 data.js 文件</button>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

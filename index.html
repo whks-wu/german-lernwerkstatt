@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>跑鹅德语 · 德语练习工坊</title>
+<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img class="brand-logo" src="images/logo-studio.png" alt="跑鹅德语" />
+      <div>
+        <h1>跑鹅德语</h1>
+        <p class="subtitle">德语练习工坊</p>
+      </div>
+    </div>
+    <nav class="tabs" role="tablist" aria-label="题型选择">
+      <button class="tab-btn is-active" data-tab="drag" role="tab" aria-selected="true">选词填空</button>
+      <button class="tab-btn" data-tab="match" role="tab" aria-selected="false">连线题</button>
+      <button class="tab-btn" data-tab="type" role="tab" aria-selected="false">打字填空</button>
+    </nav>
+    <a class="btn-secondary admin-link" href="admin.html">题库管理</a>
+  </header>
+
+  <main>
+    <section id="panel-drag" class="panel is-active" role="tabpanel" aria-labelledby="drag">
+      <div class="panel-toolbar">
+        <label for="drag-lesson-select">选择练习：</label>
+        <select id="drag-lesson-select"></select>
+        <button id="drag-reset-btn" class="btn-secondary">重新开始</button>
+        <span id="drag-score" class="score-badge"></span>
+      </div>
+      <div id="drag-exercise-root" class="exercise-root"></div>
+    </section>
+
+    <section id="panel-match" class="panel" role="tabpanel" aria-labelledby="match">
+      <div class="panel-toolbar">
+        <label for="match-lesson-select">选择练习：</label>
+        <select id="match-lesson-select"></select>
+        <button id="match-reset-btn" class="btn-secondary">重新开始</button>
+        <span id="match-score" class="score-badge"></span>
+      </div>
+      <div id="match-exercise-root" class="exercise-root"></div>
+    </section>
+
+    <section id="panel-type" class="panel" role="tabpanel" aria-labelledby="type">
+      <div class="panel-toolbar">
+        <label for="type-lesson-select">选择练习：</label>
+        <select id="type-lesson-select"></select>
+        <button id="type-reset-btn" class="btn-secondary">重新开始</button>
+        <button id="type-check-btn" class="btn-primary">检查答案</button>
+        <span id="type-score" class="score-badge"></span>
+      </div>
+      <div id="type-exercise-root" class="exercise-root"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>拖动 / 点击连线 / 输入完成练习 — 适合课堂或自学使用</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/dragFill.js"></script>
+  <script src="js/matching.js"></script>
+  <script src="js/typeFill.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

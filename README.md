@@ -46,8 +46,8 @@ Then open `http://localhost:8420`.
    Add, edit, or delete lessons for all three exercise types; changes autosave as a local draft in your browser.
 3. 点击"导出 data.js 文件"下载，替换项目里的 [js/data.js](js/data.js)。
    Click "导出 data.js 文件" (Export data.js) to download it, then replace [js/data.js](js/data.js) in the project.
-4. 重新部署（见下方）使改动生效。
-   Redeploy (see below) to make the changes live.
+4. **手动重新部署**（见下方）使改动生效——仅仅 `git push` 到 GitHub 并不会让线上网站更新，因为 Vercel 项目目前没有连接 GitHub 自动部署，必须手动运行部署命令。
+   **Manually redeploy** (see below) to make the changes live — just running `git push` to GitHub does **not** update the live site, because the Vercel project isn't connected to GitHub for automatic deploys. You must run the deploy command yourself.
 
 题库格式说明写在 [js/data.js](js/data.js) 文件开头的注释里。
 The question-bank data format is documented in the comment at the top of [js/data.js](js/data.js).
@@ -57,8 +57,13 @@ The question-bank data format is documented in the comment at the top of [js/dat
 项目部署在 [Vercel](https://vercel.com) 免费套餐上，静态站点零配置。
 The project is deployed on [Vercel](https://vercel.com)'s free tier as a zero-config static site.
 
+⚠️ **重要：这个 Vercel 项目没有连接 GitHub 自动部署**，是用 `vercel` 命令行从本地文件夹直接部署的。也就是说，`git push` 到 GitHub 只会更新代码仓库（备份、版本记录），**不会**让线上网站更新——每次改完内容都必须在本地手动运行一次部署命令。
+⚠️ **Important: this Vercel project is not connected to GitHub for automatic deploys.** It was deployed directly from the local folder via the `vercel` CLI. That means `git push` only updates the GitHub repo (backup, version history) — it does **not** update the live site. You must manually run the deploy command locally after every content change.
+
 ```bash
-npx vercel --prod --yes
+cd "german-lernwerkstatt"
+git add -A && git commit -m "更新说明" && git push   # 同步到 GitHub，可选 / sync to GitHub, optional
+npx vercel --prod --yes                              # 真正让网站更新 / this is what actually updates the live site
 ```
 
 ## 项目结构 / Project structure

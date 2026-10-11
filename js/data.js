@@ -47,7 +47,13 @@ const GERMAN_DATA = {
         "Petersilie",
         "Basilikum",
         "Dill",
-        "Rucola"
+        "Rucola",
+        "Koriander",
+        "Gurken",
+        "Möhren",
+        "Zwiebeln",
+        "Knoblauch",
+        "Radieschen"
       ],
       "items": [
         {
@@ -65,6 +71,30 @@ const GERMAN_DATA = {
         {
           "image": "images/dill.png",
           "answer": "Dill"
+        },
+        {
+          "image": "images/koriander.png",
+          "answer": "Koriander"
+        },
+        {
+          "image": "images/gurken.png",
+          "answer": "Gurken"
+        },
+        {
+          "image": "images/moehren.png",
+          "answer": "Möhren"
+        },
+        {
+          "image": "images/zwiebeln.png",
+          "answer": "Zwiebeln"
+        },
+        {
+          "image": "images/knoblauch.png",
+          "answer": "Knoblauch"
+        },
+        {
+          "image": "images/radieschen.png",
+          "answer": "Radieschen"
         }
       ]
     }

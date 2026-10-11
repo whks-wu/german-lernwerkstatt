@@ -1,52 +1,6 @@
 const GERMAN_DATA = {
   "dragFill": [
     {
-      "id": "bestimmte-artikel",
-      "title": "定冠词 der / die / das",
-      "hint": "根据名词的性别，把正确的冠词拖到空格里。",
-      "words": [
-        "der",
-        "der",
-        "die",
-        "die",
-        "das",
-        "das",
-        "dem"
-      ],
-      "sentences": [
-        {
-          "before": "",
-          "answer": "der",
-          "after": " Mann trinkt Kaffee."
-        },
-        {
-          "before": "",
-          "answer": "die",
-          "after": " Frau liest ein Buch."
-        },
-        {
-          "before": "",
-          "answer": "das",
-          "after": " Kind spielt im Garten."
-        },
-        {
-          "before": "",
-          "answer": "der",
-          "after": " Tisch ist neu."
-        },
-        {
-          "before": "",
-          "answer": "die",
-          "after": " Lampe ist kaputt."
-        },
-        {
-          "before": "",
-          "answer": "das",
-          "after": " Auto ist rot."
-        }
-      ]
-    },
-    {
       "id": "tiere-bilder",
       "title": "动物图片配对",
       "hint": "把词库中正确的德语单词拖到对应的图片下面。",
@@ -82,6 +36,35 @@ const GERMAN_DATA = {
         {
           "image": "🐟",
           "answer": "der Fisch"
+        }
+      ]
+    },
+    {
+      "id": "drag-mv3mihssb9iu",
+      "title": "Gewürze",
+      "hint": "把词库中正确的德语单词拖到对应的图片下面。",
+      "words": [
+        "Petersilie",
+        "Basilikum",
+        "Dill",
+        "Rucola"
+      ],
+      "items": [
+        {
+          "image": "images/petersilie.png",
+          "answer": "Petersilie"
+        },
+        {
+          "image": "images/rucola.png",
+          "answer": "Rucola"
+        },
+        {
+          "image": "images/basilikum.png",
+          "answer": "Basilikum"
+        },
+        {
+          "image": "images/dill.png",
+          "answer": "Dill"
         }
       ]
     }
